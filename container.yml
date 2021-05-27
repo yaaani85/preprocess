@@ -1,0 +1,35 @@
+name: preprocessing
+version: 1.0.0
+kind: compute
+
+dependencies:
+  - python3
+  - python3-yaml
+  - pip
+
+install:
+  - pip install pandas
+  - pip install numpy
+  - pip install scikit-learn
+  - pip install scipy
+
+files:
+  - brane_preprocessing.py
+
+entrypoint:
+  kind: task
+  exec: brane_preprocessing.py
+
+actions:
+  'preprocess':
+    command:
+      args:
+        - preprocess
+    input:
+      - type: boolean
+        name: use_local
+      - type: boolean
+        name: use_sampled_data
+    output:
+      - type: string
+        name: output
