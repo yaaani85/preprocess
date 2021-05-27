@@ -1,5 +1,5 @@
 
-from preprocess.brain_preprocessing import preprocess
+from . import brain_preprocessing
 
 #local testing
 def test_preprocess():
