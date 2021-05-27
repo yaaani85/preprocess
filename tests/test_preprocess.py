@@ -1,7 +1,7 @@
 
-from . import brain_preprocessing
+from . import brane_preprocessing
 
 #local testing
 def test_preprocess():
-  assert preprocess(True, True) == "Preprocessed data"
+  assert brane_preprocessing(True, True) == "Preprocessed data"
   
