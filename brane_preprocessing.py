@@ -104,7 +104,7 @@ DTYPES = {
 #eval_metric: 
 def preprocess(use_local: bool, use_sampled_data: bool):
     use_sampled_data_str = '1000' if use_sampled_data else ''
-    data_loc_prefix = '../data/' if use_local else '/data/data/'
+    data_loc_prefix = 'data/' if use_local else '/data/data/'
         
     # logger.info('Loading Train and Test Data into dataframe')
     # print("test print")
