@@ -24,6 +24,8 @@ jobs:
           python -m pip install --upgrade pip
           pip install flake8 pytest
           pip install pyyaml
+          pip install numpy
+          pip install pandas
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       - name: Lint with flake8
         run: |
