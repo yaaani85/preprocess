@@ -4,3 +4,7 @@ This is an example Brane package for a preprocessing solution. Import it as foll
 ```shell
 $ brane import yaaani85/preprocess
 ```
+You also need to push the package to be able to import it in your remote session or jupyterlab notebook:
+```shell
+brane push kaggle 1.0.0
+```
