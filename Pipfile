@@ -1,0 +1,17 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[dev-packages]
+pre-commit = "*" 
+invoke = "*" 
+flake8 = "*"
+pytest = "*"
+
+[packages]
+pyyaml = "*"
+numpy = "*"
+pandas = "*"
+sklearn = "*"
+scipy = "*"
