@@ -37,37 +37,22 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python }}
-          
-          # Semantic version range syntax or exact version of a Python version
-          # python-version: '3.x'
-          # Optional - x64 or x86 architecture, defaults to x64
-          # architecture: 'x64'
-      # You can test your matrix by printing the current Python version
-      # - name: Display Python version
-        # run: python -c "import sys; print(sys.version)"
-
+         
       - name: Install dependencies
         run: |
           pip install pipenv
           pipenv install --dev
-      # - name: Install dependencies
-      #   run: |
-      #     python -m pip install --upgrade pip
-      #     python -m pip install pytest
-      #     pip install flake8
-      #     pip install pyyaml
-      #     pip install numpy
-      #     pip install pandas
-      #     pip install sklearn
-      #     pip install scipy
-      #     if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+      
+      - name: Code checks
+        uses: pre-commit/action@v2.0.0
+        with:
+          extra_args: --all-files
 
-      - name: Lint
-        run: |
-          # stop the build if there are Python syntax errors or undefined names
-          pipenv run flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-          # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
-          pipenv run flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-      - name: Run tests
-        run: |
-          pipenv run pytest
+      # - name: Lint
+      #   run: |
+      #     pipenv run flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+      #     pipenv run flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+
+      # - name: Run tests
+      #   run: |
+      #     pipenv run pytest

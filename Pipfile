@@ -5,6 +5,7 @@ name = "pypi"
 
 [dev-packages]
 pre-commit = "*" 
+black = "==21.5b2"
 invoke = "*" 
 flake8 = "*"
 pytest = "*"
