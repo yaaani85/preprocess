@@ -47,12 +47,3 @@ jobs:
         uses: pre-commit/action@v2.0.0
         with:
           extra_args: --all-files
-
-      # - name: Lint
-      #   run: |
-      #     pipenv run flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-      #     pipenv run flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-
-      # - name: Run tests
-      #   run: |
-      #     pipenv run pytest
