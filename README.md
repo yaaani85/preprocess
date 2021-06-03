@@ -6,5 +6,5 @@ $ brane import yaaani85/preprocess
 ```
 You also need to push the package to be able to import it in your remote session or jupyterlab notebook:
 ```shell
-brane push kaggle 1.0.0
+brane push preprocess 1.0.0
 ```
