@@ -1,5 +1,7 @@
 ## WSCBS2021 Preprocessing
 
+This implementation is based on [bogorodvo's solution](https://www.kaggle.com/bogorodvo/lightgbm-baseline-model-using-sparse-matrix).
+
 This is an example Brane package for a preprocessing solution. Import it as follows:
 
 ```shell
